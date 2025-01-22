@@ -1,0 +1,496 @@
+.card__img {
+	padding-bottom: 40px;
+}
+
+.card__wrapper {
+	padding: 0 53px 0 69px;
+}
+
+.holiday {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card__text-header {
+	padding-bottom: 18px;
+	margin: 0;
+}
+
+.text-header-break {
+	line-height: 110%;
+}
+
+.card__text-main {
+	padding-bottom: 30px;
+	margin-bottom: 0;
+}
+
+.card__text-signature {
+	padding-bottom: 60px;
+}
+
+.card__header {
+	font-size: 40px;
+	font-weight: 400;
+	letter-spacing: -0.015em;
+	word-wrap: normal;
+}
+
+.card__text-appeal {
+	padding-bottom: 18px;
+	margin: 0;
+}
+
+.card__title,
+.main-text,
+.card__signature {
+	font-size: 15px;
+	line-height: 120%;
+	font-weight: 400;
+	font-family: 'SBSansText-Regular';
+}
+
+#cardHeader {
+	padding-right: 0;
+}
+
+@media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.test-page {
+		margin-bottom: 0;
+	}
+
+	.center {
+		justify-content: center;
+	}
+
+	.card__title,
+	.main-text,
+	.card__signature {
+		font-size: 14px;
+	}
+
+	.text_container {
+		padding: 0 30px;
+	}
+}
+
+@media (max-width: 587px) {
+	.text-element {
+		width: 384px;
+		left: -324px;
+	}
+
+	.card__title,
+	.main-text,
+	.card__signature {
+		font-size: 12px;
+	}
+
+	.card__wrapper {
+		padding: 0 48px 0 54px;
+	}
+
+	.text-header-break,
+	.card__text-header {
+		font-size: 29px;
+	}
+
+	.bannerInput {
+		width: 100%;
+	}
+
+	.rowBody {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	.rowHead {
+		width: 100%;
+		margin-right: 0;
+		font-family: 'SBSansDisplay-Regular';
+		color: #1c568c;
+	}
+
+	.warningButton {
+		width: 60%;
+		height: fit-content;
+		border-radius: 4px;
+		padding: 10px 0;
+		margin-top: 20px;
+	}
+
+	.warningButton p {
+		font-size: 0.9rem;
+	}
+
+	body {
+		overflow-x: hidden;
+		width: 100vw;
+	}
+
+	.container {
+		overflow-x: hidden;
+		width: 100vw;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+
+	.holiday-radio__label {
+		font-size: 1rem;
+		margin-right: 20px;
+	}
+
+	.header__text {
+		align-self: flex-start;
+	}
+
+	.header__schedule {
+		margin-bottom: 20px;
+		align-self: flex-end;
+	}
+
+	.header {
+		flex-direction: column-reverse;
+	}
+
+	.headerSchedule {
+		max-width: 190px;
+		align-self: flex-start;
+	}
+
+	.schedule {
+		flex-direction: row;
+	}
+
+	.scheduleRow {
+		font-size: 0.7rem;
+	}
+
+	.scheduleFixed {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.scheduleFixedWrapper {
+		width: 100vw;
+	}
+
+	.scheduleHoliday {
+		min-width: 120px;
+		max-width: 120px;
+	}
+
+	.itemImg {
+		width: 16px;
+		height: 16px;
+	}
+
+	.card__header {
+		font-family: 'SBSansDisplay-Regular';
+	}
+
+	.card__title,
+	.main-text,
+	.cerd__signature {
+		font-family: 'SBSansText-Regular';
+	}
+
+	.item {
+		max-width: 20px;
+		min-width: 20px;
+		margin-left: 10px;
+	}
+
+	.scheduleRow {
+		width: 100%;
+	}
+
+	.scheduleDate {
+		max-width: 40px;
+		min-width: 40px;
+	}
+
+	.downloadGraph {
+		margin-bottom: 0;
+	}
+
+	.generation,
+	.download {
+		font-size: 1rem !important;
+	}
+
+	.padding_qr {
+		padding-left: 9%;
+	}
+
+	.w60 {
+		width: 70px;
+		height: 70px;
+	}
+
+	.btn-block {
+		text-align: center !important;
+	}
+
+	.grande_title {
+		font-size: 18px;
+		text-align: center;
+	}
+
+	.buttons {
+		flex-direction: column;
+	}
+}
+
+@media (max-width: 520px) {
+	.card__text-header,
+	.text-header-break {
+		line-height: 110%;
+		font-size: 27px;
+		margin: 0;
+	}
+
+	.card__wrapper {
+		padding: 0 42px 0 52px;
+	}
+
+	.card__title,
+	.main-text,
+	.card__signature {
+		font-size: 11px;
+		line-height: 120%;
+		font-weight: 400;
+		font-family: 'SBSansText-Regular';
+	}
+
+	.card__header {
+		font-size: 29px;
+	}
+
+	.generation,
+	.download {
+		width: 100%;
+	}
+}
+
+@media (min-width: 421px) and (max-width: 480px) {
+	.card__img {
+		padding-bottom: 20px;
+	}
+
+	.card__wrapper {
+		padding: 0 23px 0 42px;
+	}
+
+	.card__text-header,
+	.text-header-break {
+		font-size: 23px;
+		margin: 0;
+	}
+
+	.card__text-main {
+		padding-bottom: 20px;
+		margin-bottom: 0;
+	}
+
+	.card__text-signature {
+		padding-bottom: 41px;
+	}
+
+	.card__header {
+		font-size: 27px;
+	}
+
+	.card__text-appeal {
+		padding-bottom: 15px;
+		margin: 0;
+	}
+
+	.card__title,
+	.main-text,
+	.card__signature {
+		font-size: 10px;
+		line-height: 120%;
+		font-family: 'SBSansText-Regular';
+	}
+
+	.grande_title {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 420px) {
+	.header {
+		flex-wrap: nowrap;
+	}
+
+	.card__wrapper {
+		padding: 0 27px 0 40px;
+	}
+
+	.card__img {
+		padding-bottom: 20px;
+	}
+
+	.card__text-header,
+	.text-header-break {
+		font-size: 22px;
+		margin: 0;
+	}
+
+	.card__header {
+		font-size: 24px;
+	}
+
+	.card__title,
+	.main-text,
+	.card__signature {
+		font-size: 9.3px;
+	}
+
+	.card__text-signature {
+		padding-bottom: 39px;
+	}
+
+	.card__text-main {
+		padding-bottom: 19px;
+		margin-bottom: 0;
+	}
+
+	.grade__faq {
+		font-size: 16px;
+		margin: 0 auto;
+	}
+
+	.card__text-header {
+		padding-bottom: 14px;
+	}
+
+	.card__text-appeal {
+		padding-bottom: 15px;
+	}
+}
+
+@media (min-width: 400px) and (max-width: 410px) {
+	.card__wrapper {
+		padding: 0 40px 0 36px;
+	}
+
+	.card__title,
+	.main-text,
+	.card__signature {
+		font-size: 9px;
+	}
+}
+
+@media (min-width: 391px) and (max-width: 399px) {
+	.card__title,
+	.main-text,
+	.card__signature {
+		font-size: 9px;
+	}
+}
+
+@media (min-width: 360px) and (max-width: 390px) {
+	.card__wrapper {
+		padding: 0 30px 0 36px;
+	}
+
+	.headerSchedule {
+		max-width: 150px;
+	}
+
+	.firstRow {
+		padding-top: 190px !important;
+	}
+
+	.card__header {
+		line-height: 110%;
+		font-size: 21px;
+	}
+
+	.card__title,
+	.main-text,
+	.card__signature {
+		font-size: 8px;
+	}
+
+	.card__img {
+		padding-bottom: 20px;
+	}
+
+	.card__text-header,
+	.text-header-break {
+		font-size: 20px;
+		margin-bottom: 0;
+	}
+
+	.card__text-appeal {
+		padding-bottom: 12px;
+		margin-bottom: 0;
+	}
+
+	.card__text-main {
+		padding-bottom: 18px;
+		margin-bottom: 0;
+	}
+
+	.card__text-signature {
+		padding-bottom: 36px;
+	}
+
+	.grande_title {
+		margin-bottom: 20px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 359px) {
+	.text-element {
+		width: 335px;
+		left: -298px;
+	}
+
+	.card__container {
+		min-width: 270px;
+	}
+
+	.card__wrapper {
+		padding: 0 19px 0 30px;
+	}
+
+	.card__text-header,
+	.text-header-break {
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+
+	.card__title,
+	.main-text,
+	.card__signature {
+		font-size: 7.3px;
+	}
+
+	.card__text-appeal {
+		padding-bottom: 10px;
+	}
+
+	.card__text-main {
+		padding-bottom: 13px;
+	}
+
+	.holiday-radio {
+		gap: 11px;
+	}
+
+	.grade__faq {
+		height: auto;
+	}
+}
