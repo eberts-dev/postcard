@@ -193,8 +193,7 @@ body {
 }
 
 .title {
-	padding-top: 0 !important;
-	padding-bottom: 0;
+	padding-bottom: 20px;
 }
 
 body {
@@ -708,4 +707,8 @@ textarea {
 
 .format {
 	color: #62a8ff;
+}
+
+#reminder {
+	display: none;
 }

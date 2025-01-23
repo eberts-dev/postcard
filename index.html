@@ -18,23 +18,18 @@
 <body class="bg-light">
   <div class="container">
     <main>
-      <div class="py-5 text-left title">
+      <div class="title">
         <div class="header">
           <div class="header__text">
             <h2>Создайте открытку<i class="bi bi-question-circle smallerQuestion"
                 title="Заполните поля ниже и нажмите на кнопку «Сформировать открытку»"></i></h2>
           </div>
-          <div class="header__schedule" style="display: none;">
-            <div>
-              <a class="header__link text-right" href="#">Посмотреть график праздников</a>
-            </div>
-          </div>
         </div>
         <div class="blueLine"></div>
       </div>
-      <div class="row g-5">
+      <div class="row">
         <form id="form" novalidate>
-          <div class="row g-3">
+          <div class="row">
             <div class="col-sm-12 no-margin">
               <label for="segment" class="form__label">Шаг 1. Сегмент получателя открытки</label>
               <select class="form__select margin" id="segment" size="1" required>
@@ -97,7 +92,7 @@
         </form>
       </div>
 
-      <div id="grade" class="grade_container">
+      <div id="reminder" class="grade_container">
         <div class="grande_title">
           <button class="grade__faq download-info">
             <span>Скачать анимированную открытку</span>
@@ -150,7 +145,7 @@
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="js/script.js" type='module'></script>
 </body>
 
