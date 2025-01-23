@@ -15,12 +15,10 @@ window.addEventListener('load', function () {
 		cardAppeal = document.querySelector('#cardAppeal'),
 		cardMainText = document.querySelector('#cardMainText'),
 		cardSignature = document.querySelector('#cardSignature'),
-		cardHeaderBreak = document.querySelector('#cardHeader'),
-		grade = document.querySelector('#grade')
-	grade.style.display = 'none'
+		cardHeaderBreak = document.querySelector('#cardHeader')
 
-	// (cardLabel = document.querySelector('#appeali')),
-	// (cardCaption = document.querySelector('#signatureChi'))
+	// cardLabel = document.querySelector('#appeali'),
+	// cardCaption = document.querySelector('#signatureChi')
 
 	const content = {
 		birthday_v1: {
@@ -153,7 +151,7 @@ window.addEventListener('load', function () {
 				bg: 'background: linear-gradient(0.00deg, rgb(239, 243, 254),rgb(255, 255, 255) 49.052%); color: #353F47',
 			},
 		},
-		urist_v1: {
+		urist: {
 			dkk: {
 				banner: 'single',
 				firstImgSrc:
@@ -308,11 +306,9 @@ window.addEventListener('load', function () {
 				'finance_v2',
 				'wood_v1',
 				'wood_v2',
-				'econom_v1',
-				'econom_v2',
 			],
-			rgs: ['birthday_v1', 'birthday_v2'],
-			dkk: ['urist_v1'],
+			rgs: ['birthday_v1', 'birthday_v2', 'econom_v1', 'econom_v2'],
+			dkk: ['urist'],
 		},
 		other: {
 			pro: [
@@ -354,7 +350,7 @@ window.addEventListener('load', function () {
 		les_v1: 'Новый год — Лесная промышленность (Вариант 1) &#11088; + анимация',
 		les_v2: 'Новый год — Лесная промышленность (Вариант 2)',
 
-		urist_v1: 'День юриста 3.12 (Вариант 1)',
+		urist: 'День юриста 3.12 (Вариант 1)',
 
 		help_v1: 'День спасателя РФ 27.12 (Вариант 1)',
 		help_v2: 'День спасателя РФ 27.12 (Вариант 2)',
@@ -366,10 +362,6 @@ window.addEventListener('load', function () {
 			const pictureUrl = {
 				animation_les:
 					'https://image.sendsay.ru/image/sberbank333/test%5Fclientrics/test%5Fconstructor%5Frework/holidays/animate/build%5Fv2.gif',
-				animation_build:
-					'https://eimage.sendsay.ru/image/sberbank333/test%5Fclientrics/test%5Fconstructor%5Frework/holidays/animate/st%5Fv2.gif',
-				animatiom_retail:
-					'https://image.sendsay.ru/image/sberbank333/test%5Fclientrics/test%5Fconstructor%5Frework/holidays/animate/retail%5Fv2.gif',
 				animatiom_mstroy_v1:
 					'https://image.sendsay.ru/image/sberbank333/test%5Fclientrics/test%5Fconstructor%5Frework/holidays/animate/mstroy%5Fv1.gif',
 				animatiom_mstroy_v2:
@@ -432,9 +424,9 @@ window.addEventListener('load', function () {
 		})
 
 	function setAnimate() {
-		const grade = document.getElementById('grade')
-		grade.classList.add('show')
-		grade.style.display = 'flex'
+		const reminder = document.getElementById('reminder')
+		reminder.classList.add('show')
+		reminder.style.display = 'flex'
 
 		const holidays = [
 			'les_v1',
@@ -443,13 +435,12 @@ window.addEventListener('load', function () {
 			'turizm_v1',
 			'energo_v2',
 			'metal_v2',
-			'newYear_ksb_v2',
 		]
 
 		if (!holidays.includes(holiday.value)) {
-			grade.style.display = 'none'
+			reminder.style.display = 'none'
 		}
-		return grade
+		return reminder
 	}
 
 	function setLocation(curLoc) {
@@ -618,7 +609,6 @@ window.addEventListener('load', function () {
 			`&` +
 			`holiday=` +
 			holiday.value
-		//console.log(curLoc)
 		setLocation(curLoc)
 
 		let scan = document.querySelector('#scan')
