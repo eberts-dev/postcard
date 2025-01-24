@@ -17,9 +17,6 @@ window.addEventListener('load', function () {
 		cardSignature = document.querySelector('#cardSignature'),
 		cardHeaderBreak = document.querySelector('#cardHeader')
 
-	// cardLabel = document.querySelector('#appeali'),
-	// cardCaption = document.querySelector('#signatureChi')
-
 	const content = {
 		birthday_v1: {
 			rgs: {
@@ -525,10 +522,6 @@ window.addEventListener('load', function () {
 	function clearForm() {
 		textHoliday.value = ''
 		holidayDiv.style.display = 'none'
-		document.querySelector('#appeal').style.display = 'block'
-		document.querySelector('#appealChi').style.display = 'none'
-		document.querySelector('#signature').style.display = 'block'
-		document.querySelector('#signatureChi').style.display = 'none'
 
 		document.querySelectorAll('input[name="holiday"]').forEach(elem => {
 			elem.checked = false
