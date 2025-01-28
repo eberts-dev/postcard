@@ -1,9 +1,8 @@
 
-import './fonts/font.scss'
-import { animatePicture } from './js/animatePicture.js'
-import './js/cdn.js'
-import { content, list, names } from './js/mock.js'
-import './styles/style.scss'
+import '../scss/style.scss'
+import './cdn.js'
+import { animatePicture } from './modules/animatePicture.js'
+import { content, list, names } from './modules/mock.js'
 
 window.addEventListener('load', function () {
 	clearLoc()

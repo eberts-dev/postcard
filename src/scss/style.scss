@@ -1,26 +1,8 @@
 @import 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css';
 @import 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css';
 
-
-//colors
-$white: #fff;
-$light: #f5faff;
-$gray: #ffffffde;
-$semi-gray: #454646;
-$ui: #1c568c;
-$form-ui: #285292;
-$border: #0475ff;
-$shadow: #0061bb91;
-$gray-blue: #a6b8c9;
-$biz: #23a596;
-$pro: #197970;
-$green-dark: #fcfdff;
-$semi-dark: #00000080;
-$dark: #242424;
-
-$blueToRed: linear-gradient(45deg, #0061bb, #b3131375, #ff000000);
-$blueToWhite: linear-gradient(128deg, #0071ffeb 43%, #f5fafe 100%);
-
+@import 'root.scss';
+@import 'font.scss';
 
 .card__img {
 	max-width: 600px;

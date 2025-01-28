@@ -7,127 +7,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Конструктор открыток</title>
 </head>
-
 <body class="bg">
-  <div class="container">
-    <main>
-      <div class="title">
-        <div class="header">
-          <div class="header__text">
-            <h2>Создайте открытку<i class="bi bi-question-circle smallerQuestion"
-                title="Заполните поля ниже и нажмите на кнопку «Сформировать открытку»"></i></h2>
-          </div>
-        </div>
-        <div class="blueLine"></div>
-      </div>
-      <div class="row">
-        <form id="form" novalidate>
-          <div class="row">
-            <div class="col-sm-12 no-margin">
-              <label for="segment" class="form__label">Шаг 1. Сегмент получателя открытки</label>
-              <select class="form__select margin" id="segment" size="1" required>
-                <option value="">Выберите сегмент</option>
-                <option value="pro">КСБ</option>
-                <option value="rgs">РГС</option>
-                <option value="dkk">ДКК</option>
-              </select>
+  <div id="app">
+    <div class="container">
+      <main>
+        <div class="title">
+          <div class="header">
+            <div class="header__text">
+              <h2>Создайте открытку<i class="bi bi-question-circle smallerQuestion"
+                  title="Заполните поля ниже и нажмите на кнопку «Сформировать открытку»"></i></h2>
             </div>
-            <div class="col-sm-12">
-              <label for="holiday" id="changeText" class="form__label">Шаг 2. Выберите праздник</label>
-              <div id="category">
-                <div class="holiday-radio margin" id="holidayCategory">
-                  <div class="holiday">
-                    <input id="profInput" style="margin-right: 10px;" name="holiday" value="prof" type="radio">
-                    <label for="profInput" class="holiday-radio__label" id="profLabel">Профессиональный</label>
-                  </div>
-                  <div class="holiday">
-                    <input id="otherInput" style="margin-right: 10px;" name="holiday" value="other" type="radio">
-                    <label for="otherInput" class="holiday-radio__label" id="otherLabel">Другой</label>
+          </div>
+          <div class="blueLine"></div>
+        </div>
+        <div class="row">
+          <form id="form" novalidate>
+            <div class="row">
+              <div class="col-sm-12 no-margin">
+                <label for="segment" class="form__label">Шаг 1. Сегмент получателя открытки</label>
+                <select class="form__select margin" id="segment" size="1" required>
+                  <option value="">Выберите сегмент</option>
+                  <option value="pro">КСБ</option>
+                  <option value="rgs">РГС</option>
+                  <option value="dkk">ДКК</option>
+                </select>
+              </div>
+              <div class="col-sm-12">
+                <label for="holiday" id="changeText" class="form__label">Шаг 2. Выберите праздник</label>
+                <div id="category">
+                  <div class="holiday-radio margin" id="holidayCategory">
+                    <div class="holiday">
+                      <input id="profInput" style="margin-right: 10px;" name="holiday" value="prof" type="radio">
+                      <label for="profInput" class="holiday-radio__label" id="profLabel">Профессиональный</label>
+                    </div>
+                    <div class="holiday">
+                      <input id="otherInput" style="margin-right: 10px;" name="holiday" value="other" type="radio">
+                      <label for="otherInput" class="holiday-radio__label" id="otherLabel">Другой</label>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div id="holidayDiv" class="col-sm-12 margin" style="width: 100%; display: none;">
-              <select id="holiday" class="form__select" size="1"></select>
-            </div>
-          </div>
-
-          <div class="col-sm-12 margin">
-            <label for="appeal" class="form__label" style="padding-right: 30px;">Обращение к&nbsp;получателю <i
-                class="bi bi-question-circle"
-                title="Вы можете редактировать обращение. Например, вместо слов «Уважаемый клиент» указать имя и отчество получателя, для которого формируете открытку"></i></label>
-            <textarea class="text" rows="2" name="text" maxlength='200' id="appeal">Уважаемый клиент! </textarea>
-            <textarea class="text" style="display:none;" rows="2" name="text" maxlength='200'
-              id="appealChi">Dear [Jeny Smith],</textarea>
-          </div>
-          <div class="col-sm-12 margin">
-            <label for="textHoliday" class="form__label">Текст поздравления <i class="bi bi-question-circle"
-                title="Вы можете редактировать текст поздравления. Обратите внимание, что он должен быть не более 400 символов с пробелами"></i></label>
-            <textarea class="text" rows="7" name="text" maxlength='500' id="textHoliday"
-              placeholder="Когда вы выберете праздник, здесь появится текст поздравления"></textarea>
-          </div>
-          <div class="col-sm-12 margin">
-            <label for="signature" class="form__label" style="padding-right: 30px;">Подпись отправителя <i
-                class="bi bi-question-circle"
-                title="При некорректном отображении подписи требуется перезагрузка страницы"></i></label>
-            <textarea class="text" rows="2" name="text" maxlength='200'
-              id="signature">Ваш клиентский менеджер</textarea>
-            <textarea class="text" style="display:none;" rows="2" name="text" maxlength='200'
-              id="signatureChi">incerely, Your client manager [Ivan&nbsp;Ivanov]</textarea>
-          </div>
-
-          <div class="col-sm-12 row-buttons">
-            <button class="btn-download-disabled generation" type="button">Сформировать открытку</button>
-            <button type="submit" id="btnDownload" class="download btn-download-disabled" disabled>Скачать
-              открытку</button>
-          </div>
-
-        </form>
-      </div>
-
-      <div id="reminder" class="grade_container">
-        <div class="grande_title">
-          <button class="grade__faq download-info">
-            <span>Скачать анимированную открытку</span>
-            <span class="info">
-              <span class="icon"><i class="bi bi-question-circle smallerQuestion"></i></span>
-              <span class="text-element">Анимация воспроизводится на&nbsp;MacOS и&nbsp;SberOS при&nbsp;отправке
-                через почту Outlook: открыть почту&nbsp;> Вставка&nbsp;> Рисунок&nbsp;> Изображение
-                из&nbsp;файла&nbsp;> выбрать скачанную открытку в&nbsp;формате <span class="format">.gif</span>
-                и&nbsp;отправить</span>
-            </span>
-          </button>
-        </div>
-      </div>
-      <hr class="my-4">
-    </main>
-  </div>
-
-  <div class="scan_wrapper bg">
-    <div id="scan" class="bg-light">
-      <div id="card" class="hide">
-        <div class="card border-radius">
-
-          <div id="cardColor" class="card__container">
-            <div class="card__img">
-              <img class="card__img-item" id="cardBanner" src="#" alt="изображение" style="padding: 0; margin: 0;">
-            </div>
-
-            <div class="card__wrapper">
-              <div class="card__text-header">
-                <p class="zero-margin card__header" id="cardHeader"></p>
+              <div id="holidayDiv" class="col-sm-12 margin" style="width: 100%; display: none;">
+                <select id="holiday" class="form__select" size="1"></select>
               </div>
-              <div class="card__text">
-                <div class="card__text-appeal">
-                  <p class="zero-margin card__title" id="cardAppeal"></p>
-                </div>
+            </div>
 
-                <div class="card__text-main">
-                  <p class="zero-margin main-text" id="cardMainText"></p>
-                </div>
+            <div class="col-sm-12 margin">
+              <label for="appeal" class="form__label" style="padding-right: 30px;">Обращение к&nbsp;получателю <i
+                  class="bi bi-question-circle"
+                  title="Вы можете редактировать обращение. Например, вместо слов «Уважаемый клиент» указать имя и отчество получателя, для которого формируете открытку"></i></label>
+              <textarea class="text" rows="2" name="text" maxlength='200' id="appeal">Уважаемый клиент! </textarea>
+              <textarea class="text" style="display:none;" rows="2" name="text" maxlength='200'
+                id="appealChi">Dear [Jeny Smith],</textarea>
+            </div>
+            <div class="col-sm-12 margin">
+              <label for="textHoliday" class="form__label">Текст поздравления <i class="bi bi-question-circle"
+                  title="Вы можете редактировать текст поздравления. Обратите внимание, что он должен быть не более 400 символов с пробелами"></i></label>
+              <textarea class="text" rows="7" name="text" maxlength='500' id="textHoliday"
+                placeholder="Когда вы выберете праздник, здесь появится текст поздравления"></textarea>
+            </div>
+            <div class="col-sm-12 margin">
+              <label for="signature" class="form__label" style="padding-right: 30px;">Подпись отправителя <i
+                  class="bi bi-question-circle"
+                  title="При некорректном отображении подписи требуется перезагрузка страницы"></i></label>
+              <textarea class="text" rows="2" name="text" maxlength='200'
+                id="signature">Ваш клиентский менеджер</textarea>
+              <textarea class="text" style="display:none;" rows="2" name="text" maxlength='200'
+                id="signatureChi">incerely, Your client manager [Ivan&nbsp;Ivanov]</textarea>
+            </div>
 
-                <div class="card__text-signature">
-                  <p class="zero-margin card__signature" id="cardSignature"></p>
+            <div class="col-sm-12 row-buttons">
+              <button class="btn-download-disabled generation" type="button">Сформировать открытку</button>
+              <button type="submit" id="btnDownload" class="download btn-download-disabled" disabled>Скачать
+                открытку</button>
+            </div>
+
+          </form>
+        </div>
+
+        <div id="reminder" class="grade_container">
+          <div class="grande_title">
+            <button class="grade__faq download-info">
+              <span>Скачать анимированную открытку</span>
+              <span class="info">
+                <span class="icon"><i class="bi bi-question-circle smallerQuestion"></i></span>
+                <span class="text-element">Анимация воспроизводится на&nbsp;MacOS и&nbsp;SberOS при&nbsp;отправке
+                  через почту Outlook: открыть почту&nbsp;> Вставка&nbsp;> Рисунок&nbsp;> Изображение
+                  из&nbsp;файла&nbsp;> выбрать скачанную открытку в&nbsp;формате <span class="format">.gif</span>
+                  и&nbsp;отправить</span>
+              </span>
+            </button>
+          </div>
+        </div>
+        <hr class="my-4">
+      </main>
+    </div>
+
+    <div class="scan_wrapper bg">
+      <div id="scan" class="bg-light">
+        <div id="card" class="hide">
+          <div class="card border-radius">
+
+            <div id="cardColor" class="card__container">
+              <div class="card__img">
+                <img class="card__img-item" id="cardBanner" src="#" alt="изображение" style="padding: 0; margin: 0;">
+              </div>
+
+              <div class="card__wrapper">
+                <div class="card__text-header">
+                  <p class="zero-margin card__header" id="cardHeader"></p>
+                </div>
+                <div class="card__text">
+                  <div class="card__text-appeal">
+                    <p class="zero-margin card__title" id="cardAppeal"></p>
+                  </div>
+
+                  <div class="card__text-main">
+                    <p class="zero-margin main-text" id="cardMainText"></p>
+                  </div>
+
+                  <div class="card__text-signature">
+                    <p class="zero-margin card__signature" id="cardSignature"></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -136,7 +137,6 @@
       </div>
     </div>
   </div>
-  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/js/main.js"></script>
 </body>
-
 </html>
