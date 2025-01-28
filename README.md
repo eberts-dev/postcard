@@ -7,7 +7,7 @@ https://eberts-dev.github.io/postcard/
 ### Запуск
 
 ```
-	"dev": "vite",
-	"build": "vite build",
-	"preview": "vite preview"
+"dev": vite,
+"build": vite build,
+"preview": vite preview
 ```
