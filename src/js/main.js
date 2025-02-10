@@ -193,18 +193,7 @@ window.addEventListener('load', function () {
 	form.onsubmit = e => {
 		e.preventDefault()
 	
-		const curLoc =
-			`?` +
-			`download=` +
-			segment.value +
-			`_` +
-			holiday.value +
-			`&` +
-			`segment=` +
-			segment.value +
-			`&` +
-			`holiday=` +
-			holiday.value
+		const curLoc = `?download=${segment.value}_${holiday.value}$segment=${segment.value}&holiday=${holiday.value}`;
 		setLocation(curLoc)
 	
 		let scan = document.querySelector('#scan')
