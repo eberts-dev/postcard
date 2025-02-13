@@ -9,8 +9,8 @@
 </head>
 <body class="bg">
   <div id="app">
+    <main>
     <div class="container">
-      <main>
         <div class="title">
           <div class="header">
             <div class="header__text">
@@ -97,38 +97,39 @@
                   и&nbsp;отправить</span>
               </span>
             </button>
-            <div class="loading">Cкачивание...</div>
+            <div id="loading">Cкачивание...</div>
           </div>
         </div>
         <hr class="my-4">
-      </main>
     </div>
-
-    <div class="scan_wrapper bg">
-      <div id="scan" class="bg-light">
-        <div id="card" class="hide">
-          <div class="card border-radius">
-
-            <div id="cardColor" class="card__container">
-              <div class="card__img">
-                <img class="card__img-item" id="cardBanner" src="#" alt="изображение" style="padding: 0; margin: 0;">
-              </div>
-
-              <div class="card__wrapper">
-                <div class="card__text-header">
-                  <p class="zero-margin card__header" id="cardHeader"></p>
+    </main>
+    <section>
+      <div class="scan_wrapper bg">
+        <div id="scan" class="bg-light">
+          <div id="card" class="hide">
+            <div class="card border-radius">
+  
+              <div id="cardColor" class="card__container">
+                <div class="card__img">
+                  <img class="card__img-item" id="cardBanner" src="#" alt="изображение" style="padding: 0; margin: 0;">
                 </div>
-                <div class="card__text">
-                  <div class="card__text-appeal">
-                    <p class="zero-margin card__title" id="cardAppeal"></p>
+  
+                <div class="card__wrapper">
+                  <div class="card__text-header">
+                    <p class="zero-margin card__header" id="cardHeader"></p>
                   </div>
-
-                  <div class="card__text-main">
-                    <p class="zero-margin main-text" id="cardMainText"></p>
-                  </div>
-
-                  <div class="card__text-signature">
-                    <p class="zero-margin card__signature" id="cardSignature"></p>
+                  <div class="card__text">
+                    <div class="card__text-appeal">
+                      <p class="zero-margin card__title" id="cardAppeal"></p>
+                    </div>
+  
+                    <div class="card__text-main">
+                      <p class="zero-margin main-text" id="cardMainText"></p>
+                    </div>
+  
+                    <div class="card__text-signature">
+                      <p class="zero-margin card__signature" id="cardSignature"></p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -136,7 +137,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </div>
   <script type="module" src="/src/js/main.js"></script>
 </body>

@@ -2,9 +2,11 @@
 import '../scss/style.scss'
 import './cdn.js'
 import { animatePicture } from './modules/animatePicture.js'
+import { clearLoc } from './modules/clearLoc.js'
 import { content, list, names } from './modules/mock.js'
 
 window.addEventListener('load', function () {
+	
 	clearLoc()
 
 	const btnDownload = document.querySelector('#btnDownload'),
@@ -52,15 +54,15 @@ window.addEventListener('load', function () {
 		location.hash = '#' + curLoc
 	}
 
-	function clearLoc() {
-		const loc = window.location.href
-		const url = loc.split('?')
-		try {
-			history.pushState(null, null, url[0])
-			return
-		} catch (e) {}
-		location.hash = '#' + url[0]
-	}
+	// function clearLoc() {
+	// 	const loc = window.location.href
+	// 	const url = loc.split('?')
+	// 	try {
+	// 		history.pushState(null, null, url[0])
+	// 		return
+	// 	} catch (e) {}
+	// 	location.hash = '#' + url[0]
+	// }
 
 	const filterOptions = function (category, segment) {
 		const holidays = Object.values(list[category][segment])
@@ -94,10 +96,10 @@ window.addEventListener('load', function () {
 
 	function insertText() {
 		const cardappealChoose = document.querySelector('#appeal').value,
-			cardLangChoose = document.querySelector('#appealChi').value,
-			textHolidayChoose = document.querySelector('#textHoliday').value,
-			signatureChoose = document.querySelector('#signature').value,
-			signatureChiChoose = document.querySelector('#signatureChi').value
+					cardLangChoose = document.querySelector('#appealChi').value,
+					textHolidayChoose = document.querySelector('#textHoliday').value,
+					signatureChoose = document.querySelector('#signature').value,
+					signatureChiChoose = document.querySelector('#signatureChi').value
 
 		cardAppeal.textContent = cardappealChoose
 		cardMainText.textContent = textHolidayChoose
@@ -194,6 +196,7 @@ window.addEventListener('load', function () {
 		e.preventDefault()
 	
 		const curLoc = `?download=${segment.value}_${holiday.value}$segment=${segment.value}&holiday=${holiday.value}`;
+		
 		setLocation(curLoc)
 	
 		let scan = document.querySelector('#scan')
