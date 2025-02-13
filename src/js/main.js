@@ -54,16 +54,6 @@ window.addEventListener('load', function () {
 		location.hash = '#' + curLoc
 	}
 
-	// function clearLoc() {
-	// 	const loc = window.location.href
-	// 	const url = loc.split('?')
-	// 	try {
-	// 		history.pushState(null, null, url[0])
-	// 		return
-	// 	} catch (e) {}
-	// 	location.hash = '#' + url[0]
-	// }
-
 	const filterOptions = function (category, segment) {
 		const holidays = Object.values(list[category][segment])
 		return (
